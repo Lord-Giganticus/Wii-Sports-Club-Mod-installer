@@ -15,8 +15,6 @@ def debug():
 def startup():
     ip = input("Input your wii u's ip.\n")
     ftp = FTP(ip)
-    if ip == "DEBUG" or ip == "Debug" or ip == "debug":
-        debug()
 def login():
     ftp.login()
     ftp.cwd('/storage_mlc')
