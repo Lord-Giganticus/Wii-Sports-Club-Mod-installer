@@ -17,6 +17,9 @@ def startup():
     ftp = FTP(ip)
     if ip == "DEBUG" or ip == "Debug" or ip == "debug":
         debug()
+def login():
+    ftp.login()
+    ftp.cwd('/storage_mlc')
 def makefolders():
     mkdir("C:\Lord-G\WSC\Backups\content")
     chdir("C:\Lord-G\WSC\Backups\content")

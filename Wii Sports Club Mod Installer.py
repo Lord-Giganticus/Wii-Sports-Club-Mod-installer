@@ -3,9 +3,6 @@ from ftplib import FTP
 from Commands import *
 
 startup()
-def login():
-    ftp.login()
-    ftp.cwd('/storage_mlc')
 
 region = input("Enter the number representin your region.\n[1]USA\n[2]EUR\n[3]PAL\n")
 
