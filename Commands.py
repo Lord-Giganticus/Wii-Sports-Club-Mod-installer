@@ -31,7 +31,8 @@ def extractfiles():
         chdir(folder_list[entry])
         file_list = []
         for file in listdir(getcwd()):
-            file_list.append(file)
+            if path.isfile(file) == True:
+                file_list.append(file)
         length_file = len(file_list)
         chdir("C:\Lord-G\WSC\Backups\content")
         for entry_file in file_list:
@@ -50,7 +51,7 @@ def placefiles():
         ftp.cwd(ftp_list[entry])
         chdir(folder_list[entry])
         for file in listdir(getcwd()):
-            if path.isfile(file):
+            if path.isfile(file) == True:
                 ftp.storbinary('STOR '+file, open(file, 'rb'))
         entry += 1
 def error():
