@@ -26,10 +26,10 @@ def makefolders():
         entry += 1
 def extractfiles():
     chdir("C:\Lord-G\WSC\content")
-    file_list = []
     while entry <= length:
         ftp.cwd(ftp_list[entry])
         chdir(folder_list[entry])
+        file_list = []
         for file in listdir(getcwd()):
             file_list.append(file)
         length_file = len(file_list)
@@ -50,7 +50,8 @@ def placefiles():
         ftp.cwd(ftp_list[entry])
         chdir(folder_list[entry])
         for file in listdir(getcwd()):
-            ftp.storbinary('STOR '+file, open(file, 'rb'))
+            if path.isfile(file):
+                ftp.storbinary('STOR '+file, open(file, 'rb'))
         entry += 1
 def error():
     input("Whoops! That wasn't supposed to happen! Press enter to see the debug.")
