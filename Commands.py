@@ -2,8 +2,8 @@ from ftplib import FTP
 from os import *
 
 version = '1.0.0'
-ftp_list = ['/box', '/bsb', '/bwl', '/glf', '/tns', '/LayoutCommon/glf', '/message/US']
-folder_list = ['box', 'bsb', 'bwl', 'glf', 'tns', 'LayoutCommon\glf', 'message\US']
+ftp_list = ['/box', '/bsb', '/bwl', '/glf', '/tns']
+folder_list = ['box', 'bsb', 'bwl', 'glf', 'tns']
 entry = 0
 entry_file = 0
 length = len(folder_list)
