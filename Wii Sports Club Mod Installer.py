@@ -8,24 +8,33 @@ region = input("Enter the number representin your region.\n[1]USA\n[2]EUR\n[3]PA
 
 os.chdir("C:\Lord-G\WSC\content")
 if region == "1":
-    login()
-    ftp.cwd('/user/title/0005000e/10144d00/content')
-    makefolders()
-    extractfiles()
-    placefiles()
-    complete()
+    try:
+        login()
+        ftp.cwd('/user/title/0005000e/10144d00/content')
+        makefolders()
+        extractfiles()
+        placefiles()
+        complete()
+    except:
+        error()
 elif region == "2":
-    login()
-    ftp.cwd('/user/title/0005000e/10144e00/content')
-    makefolders()
-    extractfiles()
-    placefiles()
-    complete()
+    try:
+        login()
+        ftp.cwd('/user/title/0005000e/10144e00/content')
+        makefolders()
+        extractfiles()
+        placefiles()
+        complete()
+    except:
+        error()
 elif region == "3":
-    ftp.cwd('/user/title/0005000e/1012f100/content')
-    makefolders()
-    extractfiles()
-    placefiles()
-    complete()
+    try:
+        ftp.cwd('/user/title/0005000e/1012f100/content')
+        makefolders()
+        extractfiles()
+        placefiles()
+        complete()
+    except:
+        error()
 else:
     error()
