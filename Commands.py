@@ -1,6 +1,7 @@
 from ftplib import FTP
 from os import *
 
+# Made by Lord-Giganticus
 version = '1.0.0'
 ftp_list = ['/box', '/bsb', '/bwl', '/glf', '/tns']
 folder_list = ['box', 'bsb', 'bwl', 'glf', 'tns']
