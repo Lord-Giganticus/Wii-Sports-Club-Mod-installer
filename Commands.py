@@ -8,14 +8,13 @@ folder_list = ['box', 'bsb', 'bwl', 'glf', 'tns']
 entry = 0
 entry_file = 0
 length = len(folder_list)
+ip = input("Input your wii u's ip.\n")
+ftp = FTP(ip)
 
 def debug():
     print('Current version is',version,'use this when reporting bugs.')
     input("")
     exit()
-def startup():
-    ip = input("Input your wii u's ip.\n")
-    ftp = FTP(ip)
 def login():
     ftp.login()
     ftp.cwd('/storage_mlc')
@@ -55,6 +54,14 @@ def placefiles():
             if path.isfile(file) == True:
                 ftp.storbinary('STOR '+file, open(file, 'rb'))
         entry += 1
-def error():
-    input("Whoops! That wasn't supposed to happen! Press enter to see the debug.")
+def error(x, y):
+    if y == 0:
+        print("A error occured on line",str(x)+'.')
+        input("Press enter to see debug.")
+    elif y != 0:
+        print("A error has occured in the range of line",str(x),"to line",str(y)+'.')
+        input("Press enter to see debug.")
+    elif y < 0:
+        input("y is lower than 0! This error is somewhere around line",str(x)+'.\nPlease report this in the issues are of the github repo.\nPress enter to exit.')
+        exit()
     debug()
