@@ -15,7 +15,7 @@ try:
     if os.path.isfile("Wii Sports Club Mod Installer.py") == False:
         os.system('cmd /c curl https://lord-giganticus.github.io/Wii-Sports-Club-Mod-installer/files/Wii%20Sports%20Club%20Mod%20Installer.py -o "Wii Sports Club Mod Installer.py"')
 except:
-    error()
+    error(15, 16)
 else:
     input("Complete. Press enter to exit the program and open the folder.")
     os.chdir(program_location)
