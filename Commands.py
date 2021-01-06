@@ -62,6 +62,6 @@ def error(x, y):
         print("A error has occured in the range of line",str(x),"to line",str(y)+'.')
         input("Press enter to see debug.")
     elif y < 0:
-        input("y is lower than 0! This error is somewhere around line",str(x)+'.\nPlease report this in the issues are of the github repo.\nPress enter to exit.')
+        input("y is lower than 0! y is currently set to",y+".\nThis error is somewhere around line",str(x)+'.\nPlease report this in the issues are of the github repo.\nPress enter to exit.')
         exit()
     debug()
